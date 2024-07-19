@@ -1,8 +1,8 @@
 async function handle() {
-  let characters = [];
+  let characters = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"];
   let password = "";
 
-  const passwordLength = process.env.SPECIAL_CHARACTERS;
+  const passwordLength = process.env.PASSWORD_LENGTH;
 
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -11,9 +11,6 @@ async function handle() {
   }
   if (process.env.LOWERCASE_LETTERS === "true") {
     characters.push(...letters.toLowerCase());
-  }
-  if (process.env.NUMBERS === "true") {
-    characters.push(..."0123456789");
   }
   if (process.env.NUMBERS === "true") {
     characters.push(..."0123456789");
